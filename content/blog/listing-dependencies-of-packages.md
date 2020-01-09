@@ -2,6 +2,7 @@
 title: "Listing Dependencies of Packages"
 date: 2019-06-10T12:42:05+03:00
 draft: false
+disqus: true
 tags: ["Golang", "Software development"]
 ---
 

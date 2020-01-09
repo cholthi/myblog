@@ -4,3 +4,7 @@
 [submodule "themes/manis"]
 	path = themes/manis
 	url = https://github.com/yursan9/manis-hugo-theme.git
+[submodule "public"]
+	path = public
+	url = git@github.com:cholthi/cholthi.github.io.git
+	branch = master

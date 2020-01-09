@@ -10,7 +10,7 @@ pluralizeListTitles = false
 paginate = 10
 
 # Your disqus shortname
-disqusShortname = ""
+disqusShortname = "cholthiblog"
 
 # Edit this if you want to translate your blog
 defaultContentLanguage = "en"
