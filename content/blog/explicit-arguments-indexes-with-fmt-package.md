@@ -1,7 +1,7 @@
 ---
 title: "Explicit Arguments Indexes With Fmt Package"
 date: 2020-01-08T21:50:06+03:00
-draft: true
+draft: false
 ---
 
 Golang has a very handy package called `fmt` for formating data values.
@@ -9,7 +9,7 @@ Golang has a very handy package called `fmt` for formating data values.
 ```Go
 fmt.Printf("Hello %s", "world") // Hello World
 ```
-But by default, the `fmt` family of functions work by successively applying args passed after the format string to matching format verbs by position. The position starts from index `1` instead of `0` probably because the format string is the zeroth argument to fmt functions.
+But by default, the `fmt` family of functions work by successively applying args passed after the format string to matching format verbs by argument order.
 
 ```Go
 tablePrefix := "mydb"
@@ -20,7 +20,7 @@ fmt.Print(query)
 
 // SELECT mydb_table1.*, mydb_table2.id from mydb_table1 left join mydb_table2 on mydb_table2.id = mydb_table1.id;
 ```
-while the above does achieve our desired outcome, it does so by duplicating code heavily. it would be better if `tablePrefix` didn't have to be passed several times to `fmt` function if the same data value is used by many format specifiers.
+while the above does achieves our desired outcome, it does so by duplicating code heavily. it would be better if `tablePrefix` didn't have to be passed several times to `fmt` function if the same data value is used by many format specifiers.
 
 Thankfully, `fmt` package designers saw a need for that and provided a way to avoid such a duplication of code. 
 
@@ -45,6 +45,9 @@ fmt.Print(query)
 
 // SELECT mydb_table1.*, mydb_table2.id from mydb_table1 left join mydb_table2 on mydb_table2.id = mydb_table1.id;
 ```
-Such a simple tricks is easy to forget and I am putinng it here as a reminder to my self when I need it and I also hope someone in future may find it helpful too.
+
+> The position starts from index `1` instead of `0` probably because the format string is the zeroth argument to fmt functions.
+
+Such a simple tricks is easy to forget and I am puting it here as a reminder to my self when I need it and I also hope someone in future may find it helpful too.
 
 Happy coding!
